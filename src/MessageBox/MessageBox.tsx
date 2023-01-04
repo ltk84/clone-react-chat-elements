@@ -126,7 +126,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
                 })}
               >
                 {props.avatar && <Avatar letterItem={props.letterItem} src={props.avatar} />}
-                {props.title && <span>{props.title}</span>}
+                {/* {props.title && <span>{props.title}</span>} */}
                 <div
                   className={classNames(
                     'rce-mbox-time',
