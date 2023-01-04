@@ -223,6 +223,10 @@
   content: attr(data-text);
 }
 
+.rce-mbox-time.has-title {
+  padding-left: 4px;
+}
+
 .rce-mbox-time-block {
   display: flex;
   align-items: center;
