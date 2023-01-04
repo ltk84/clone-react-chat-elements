@@ -153,7 +153,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
 
             {props.reply && <ReplyMessage onClick={props.onReplyMessageClick} {...props.reply} />}
 
-            {!props.title && props.type === 'text' && (
+            {props.type === 'text' && (
               <div
                 className={classNames('rce-mbox-text', {
                   'rce-mbox-text-retracted': props.retracted,
@@ -183,7 +183,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
               <MeetingLink focus={focus} notch={notch} {...props} actionButtons={props?.actionButtons} />
             )}
 
-            <div
+            {!props.title && <div
               className={classNames(
                 'rce-mbox-time',
                 { 'rce-mbox-time-block': thatAbsoluteTime },
@@ -204,7 +204,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
                   {props.status === 'read' && <MdDoneAll color='#4FC3F7' />}
                 </span>
               )}
-            </div>
+            </div>}
           </div>
 
           {notch &&
