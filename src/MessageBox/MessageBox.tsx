@@ -131,7 +131,8 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
                   className={classNames(
                     'rce-mbox-time',
                     { 'rce-mbox-time-block': thatAbsoluteTime },
-                    { 'non-copiable': !props.copiableDate }
+                    { 'non-copiable': !props.copiableDate },
+                    { 'has-title': true}
                   )}
                   data-text={props.copiableDate ? undefined : dateText}
                 >
@@ -187,8 +188,7 @@ const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, sty
               className={classNames(
                 'rce-mbox-time',
                 { 'rce-mbox-time-block': thatAbsoluteTime },
-                { 'non-copiable': !props.copiableDate },
-                { 'has-title': true}
+                { 'non-copiable': !props.copiableDate }
               )}
               data-text={props.copiableDate ? undefined : dateText}
             >
